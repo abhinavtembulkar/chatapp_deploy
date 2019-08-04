@@ -1,10 +1,10 @@
 console.log('HELLO')
 
-var PORT = process.env.PORT || 5000
+//var PORT = process.env.PORT || 5000
 /*const port = document.getElementById('port')
 console.log(port)*/
 
-const socket = io.connect('http://localhost:'+PORT)
+const socket = io.connect()
 //const socket = io.connect('http://b83d2546.ngrok.io')
 
 const user = document.getElementById('user')
