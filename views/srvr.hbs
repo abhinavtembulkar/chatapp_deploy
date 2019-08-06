@@ -6,7 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome</title>
     <style>
-        #msgs{height:300px;}
+        #msgs{
+            height:300px;
+            }
+
+        .scroll{
+            max-height:250px;
+            overflow-y: auto;
+        }
+
+        #boxx{
+            /*padding: 0%;*/
+            }
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -42,7 +53,7 @@
                             
                             <br>
                             <div class="card">
-                                <div class="card-block" id="msgs">
+                                <div class="card-block scroll" id="msgs">
 
                                 </div>
                             </div>
@@ -55,6 +66,16 @@
                     </div>
                 </div>
             </div>
+            </div>
+
+            <div class="row d-flex justify-content-center">
+            <div class="col-6" id='boxx'>
+               <div class="d-flex justify-content-end">
+                    <button id='exit' class='btn btn-primary'>Exit Chat-></button>
+               </div>
+            </div>
+            </div>
+
         </div>
         </div>
 

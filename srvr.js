@@ -4,7 +4,7 @@ const server = require('http').createServer(app)
 const io = require('socket.io')(server)
 const hbs = require('hbs')
 
-var PORT = process.env.PORT || 5000
+var PORT = process.env.PORT || 7000
 
 server.listen(PORT,()=>{
     console.log('runninn on %s',PORT)
@@ -31,11 +31,8 @@ var chats=[]
 io.on('connection',(socket)=>{
     console.log('connected')
 
-    
     socket.on('newuser',(data)=>{
         console.log("new ",data)
-
-        //socket.emit('init',chats)
         
         var ele = chats.find((ele,i,chats)=>{
             return ele.name==data.name
@@ -43,16 +40,28 @@ io.on('connection',(socket)=>{
         
         console.log(ele)
 
-        if(chats.length==0 || !ele) chats.push(data)
+        /*if(chats.length==0 || !ele) chats.push(data)
         else
-        {
-            /*console.log(ele.name,data.chat)
-            ele.chat+=data.chat*/
-
+        {*/
+            chats.push(data)
             socket.broadcast.emit('newmsg',data)
-        }
+        //}
         console.log(chats)
     })
 
+    socket.on('clear',(data)=>{
+        console.log(chats)
+        
+        chats.find((ele,i,chats)=>{
+            
+            console.log('ele: ',ele)
+            
+            if(ele.name==data) 
+                chats.splice(i,1)
+        
+            return false
+        })
 
+        console.log(chats)
+    })
 })
