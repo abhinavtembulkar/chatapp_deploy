@@ -1,7 +1,7 @@
 console.log('HELLO')
 
 //const socket = io.connect('http://localhost:7000')
-const socket = io.connect('https://5c75bf42.ngrok.io')
+const socket = io.connect()
 
 const user = document.getElementById('user')
 const msgs = document.getElementById('msgs')
