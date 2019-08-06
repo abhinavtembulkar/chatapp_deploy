@@ -4,6 +4,7 @@
   "description": "my chat test",
   "main": "srvr.js",
   "scripts": {
+    "start": "srvr.js"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
