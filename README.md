@@ -8,3 +8,4 @@ Just enter you name and start chatting , press enter to send the message. The pe
 
 ## Screenshots
 ![test image size](/images/doctorchat.PNG){:height="400px" width="300px"}
+<img src="https://cloud.githubusercontent.com/assets/yourgif.gif" width="400" height="790">
